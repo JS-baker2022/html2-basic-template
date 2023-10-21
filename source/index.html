@@ -7,7 +7,58 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header" data-test="header">
+      <div class="header__logo-wrapper">
+        <a class="header__logo" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo/logo-full.svg" width="170" height="60">
+            <source media="(min-width: 768px)" srcset="images/logo/logo-medium.svg" width="82" height="36">
+            <img src="images/logo/logo-small.svg" width="32" height="36" alt="Логотип компании DRINK2GO.">
+          </picture>
+
+        </a>
+        <span class="header__logo-text">Интернет-магазин кофейных напитков</span>
+      </div>
+
+      <nav class="header__navigation">
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a class="header__navigation-link header__navigation-link--current" href="#">Главная</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Каталог</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">О нас</a>
+          </li>
+        </ul>
+
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--user" href="#">
+              <span class="header__menu-link-text">Войти</span>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--union" href="#">
+              <span class="header__menu-link-text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="header__navigation-button js-toggle-button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Интернет-магазин кофейных напитков DRINK2GO.</h1>
+      <section class="hero" data-test="hero">
+
+      </section>
+    </main>
 
     <script src="js/script.js" defer></script>
   </body>

@@ -1,0 +1,93 @@
+.header {
+  background-color: $base-white;
+  color: $base-black;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-wrapper {
+  margin-right: auto;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__logo-text {
+  display: none;
+}
+
+.header__navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__navigation-button {
+  background-image: url(/images/icons/stack.svg#menu);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 24px 22px;
+  border: none;
+  background-color: inherit;
+}
+
+.header__navigation-list {
+  display: none;
+}
+
+.header__menu-list {
+  @include reset-list-style;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu-item {
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+}
+
+.header__menu-link {
+  text-decoration: none;
+  color: $base-black;
+  min-width: 60px;
+  min-height: 60px;
+
+  &--user {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(/images/icons/stack.svg#user);
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left:50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &--union {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(/images/icons/stack.svg#union);
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left:50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+.header__menu-link-text {
+  display: none;
+}
