@@ -62,6 +62,98 @@
       <section class="hero" data-test="hero">
 
       </section>
+      <section class="features" data-test="features">
+        <p class="features__badge badge">Преимущества</p>
+        <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="features__list">
+          <li class="features__item features__item--speed">
+            <h3 class="features__item-title">Скорость</h3>
+            <p class="features__item-description">Готовый напиток всегда под рукой — просто открой банку</p>
+          </li>
+          <li class="features__item features__item--comfort">
+            <h3 class="features__item-title">Удобство</h3>
+            <p class="features__item-description">Легко помещается и в карман, и в маленькую сумочку</p>
+          </li>
+          <li class="features__item features__item--vitality">
+            <h3 class="features__item-title">Бодрость</h3>
+            <p class="features__item-description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </li>
+          <li class="features__item features__item--ecology">
+            <h3 class="features__item-title">Экологичность</h3>
+            <p class="features__item-description">Вся упаковка сделана из перерабатываемых материалов</p>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog__badge badge" data-test="catalog">
+        <p class="catalog">Каталог</p>
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+        <form class="catalog__filter form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="form__group">
+            <legend class="form__group-title">Цена</legend>
+            <div class="form__slider"></div>
+            <input class="form__slider-input form__slider-input--min-price" type="number" name="min-price" placeholder="0">
+            <input class="form__slider-input form__slider-input--max-price" type="number" name="max-price" placeholder="990" value="900">
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-title">Наличие молока</legend>
+            <ul class="form__group-list">
+              <li class="form__group-item form__group-item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" name="have-milk" value="no-matter" id="no-matter" checked>
+                <label class="form__radio-label" for="no-matter"><span class="form__radio-label-text">Неважно</span></label>
+              </li>
+              <li class="form__group-item form__group-item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" name="have-milk" value="only-animal" id="only-animal">
+                <label class="form__radio-label" for="only-animal"><span class="form__radio-label-text">Только животное</span></label>
+              </li>
+              <li class="form__group-item form__group-item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" name="have-milk" value="only-vegetable" id="only-vegetable">
+                <label class="form__radio-label" for="only-vegetable"><span class="form__radio-label-text">Только растительное</span></label>
+              </li>
+              <li class="form__group-item form__group-item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" name="have-milk" value="without-milk" id="without-milk" disabled>
+                <label class="form__radio-label" for="without-milk"><span class="form__radio-label-text">Без молока</span></label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-title">Страна произрастания</legend>
+            <ul class="form__group-list">
+              <li class="form__group-item form__group-item--checkbox">
+                <input class="form__checkbox-input visually-hidden" type="checkbox" name="brazil" id="brazil">
+                <label class="form__checkbox-label" for="brazil"><span class="form__checkbox-label-text">Бразилия</span></label>
+              </li>
+              <li class="form__group-item form__group-item--checkbox">
+                <input class="form__checkbox-input visually-hidden" type="checkbox" name="ethiopia" id="ethiopia">
+                <label class="form__checkbox-label" for="ethiopia"><span class="form__checkbox-label-text">Эфиопия</span></label>
+              </li>
+              <li class="form__group-item form__group-item--checkbox">
+                <input class="form__checkbox-input visually-hidden" type="checkbox" name="colombia" id="colombia">
+                <label class="form__checkbox-label" for="colombia"><span class="form__checkbox-label-text">Колумбия</span></label>
+              </li>
+              <li class="form__group-item form__group-item--checkbox">
+                <input class="form__checkbox-input visually-hidden" type="checkbox" name="costa-rica" id="costa-rica">
+                <label class="form__checkbox-label" for="costa-rica"><span class="form__checkbox-label-text">Коста-Рика</span></label>
+              </li>
+              <li class="form__group-item form__group-item--checkbox">
+                <input class="form__checkbox-input visually-hidden" type="checkbox" name="peru" id="peru" disabled>
+                <label class="form__checkbox-label" for="peru"><span class="form__checkbox-label-text">Перу</span></label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="form__button-wrapper">
+            <button class="form__button" type="submit">Применить</button>
+            <button class="form__button form__button--reset" type="reset">Сбросить</button>
+          </div>
+        </form>
+        <div class="catalog__select-wrapper">
+          <p class="catalog__select-title">Сортировка:</p>
+          <select  class="catalog__select-control" aria-label="Сортировка">
+            <option value="default">по умолчанию</option>
+            <option value="cheap">сначала дешевые</option>
+            <option value="expensive">сначала дорогие</option>
+          </select>
+        </div>
+      </section>
     </main>
 
     <script src="js/script.js" defer></script>
